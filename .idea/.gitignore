@@ -6,3 +6,10 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/description.html
+/encodings.xml
+/misc.xml
+/modules.xml
+/project-template.xml
+/vcs.xml
+/comp348A1.iml
