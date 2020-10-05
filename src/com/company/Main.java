@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.DoubleSummaryStatistics;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -17,9 +18,16 @@ public class Main {
 
         Employee[] employees;
         Stream<Employee> employeeStream;
+        
+        Scanner keyboard = new Scanner(System.in);
+        //get user input
+        System.out.println("Default emplyee record are stored in employeeRecords.txt");
+        System.out.println("Please enter the name of the file you would like to open:");
+        String file_path = keyboard.next();
+        System.out.println("Opening "+file_path);
 
         //open file
-        try(Stream<String> fileStream = Files.lines(Paths.get("employeeRecords.txt"))){
+        try(Stream<String> fileStream = Files.lines(Paths.get(file_path))){
 
             //map lines to employee objects
             employees = fileStream
